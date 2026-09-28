@@ -1,0 +1,383 @@
+
+/* Inicio configuracion inicial */
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS dek modelo de letra de Google font */
+    .raleway-<uniquifier> { 
+    font-family: "Raleway", sans-serif, Verdana;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+body{
+    font-family: "Raleway",sans-serif,Verdana;
+    background-color: #f8f9fa;
+}
+header{ 
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px black);
+    position: sticky; /*hace flotar la barra de navegacion*/
+    top: 0;
+    z-index: 100; 
+}
+
+.conten-logo{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(0.75rem, 3vw, 2rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(1rem, 4vw, 3rem);
+            flex-wrap: wrap;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 0.75rem);
+    text-decoration: none;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-weight: 600;
+    color: #1e40af;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.icono{  /*cuadrado de fondo para el icono de fontAweson*/
+    width: clamp(45px, 8vw, 40px);
+    height: clamp(45px, 8vw, 40px);
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    flex-shrink: 0;
+}
+nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(0.8rem, 2vw, 3rem);
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            transition: color 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+            padding-bottom: 4px;
+        }
+    nav a:hover {
+            color: #1e40af;
+        }
+
+        /* Crea una linea debajo del menu */
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e40af;
+            transition: 0.3s ease;
+        }
+nav a:hover::after {
+            width: 100%
+        }
+
+    .boton{
+            background-color: #1e40af;
+            color: white;
+            padding: clamp(0.6rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition:  0.3s ease,  0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .boton:hover {
+            background-color: #1e3a8a;
+            transform: translateY(-2px);
+        }
+ 
+        .boton:active {
+            transform: translateY(0);
+        }
+/* Baner de bienvenida */
+.hero{
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color:white;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 2rem);
+    min-height: 200px;
+    position:relative;
+    overflow: hidden;
+    
+}
+/* Efecto de luz */
+.hero::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(246, 245, 245, 0.532) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/*  */
+.hero-content{
+    position: relative;
+    z-index: 0;
+    max-width: 700px;
+    }
+
+.hero h1{
+    font-size:clamp(1.5rem, 3vw, 2rem) ;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+.hero p{
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+    opacity: 0.95;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1.6;
+
+}
+
+.hero-button {
+            background-color: #cf4e1f; /* Naranja */
+            color: white;
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            /* Transición suave para dos propiedades */
+            transition:  0.3s ease, 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+/* Efecto hover del botón - color más claro y levanta */
+        .hero-button:hover {
+            background-color: #e55a23; /* Naranja más claro */
+            transform: translateY(-2px); /* Se levanta 2px */
+        }
+
+/* ====================================
+    ECCIÓN SERVICIOS - CARDS
+    ==================================== */
+        .servicios {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(2rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+            scroll-margin-top: 100px; /* Espacio al hacer scroll a esta sección */
+        }
+
+        /* Título de servicios */
+        .servicios-titulo {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+        }
+
+        /* Grid responsivo - se adapta automáticamente*/
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(1.5rem, 3vw, 2rem);
+        }
+ 
+        /* Card individual de servicio */
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(1rem, 2vw, 1.5rem);
+        }
+
+.bloque-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.datos-contacto {
+    flex: 1 1 320px;          /* crece, se achica, base 320px */
+    background: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.datos-contacto h3 {
+    font-size: 18px;
+    color: #3350e2;
+    margin-bottom: 10px;
+}
+
+.datos-contacto ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.datos-contacto li {
+    padding: 6px 0;
+}
+
+  /* Los iconos quedan todos alineados a la misma distancia */
+.datos-contacto li i {
+    color: #3350e2;
+    width: 22px;
+}
+
+.datos-contacto a {
+    color: #222;
+    text-decoration: none;
+}
+
+.datos-contacto a:hover {
+    color: #3350e2;
+    text-decoration: underline;
+}
+
+.nota {
+    font-size: 13px;
+    color: #3350e2;
+}
+
+        /* El mapa: el iframe ocupa todo el ancho de su columna */
+.mapa {
+    flex: 1 1 420px;
+    min-height: 340px;
+    border-radius: 8px;
+    overflow: hidden;         /* recorta el mapa a las esquinas redondeadas */
+    border: 1px solid #E0E0E0;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: 0;                /* saca el borde gris que trae el iframe */
+    display: block;
+}
+.empresa{
+    display:block;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    padding: clamp(2rem,8vw,4rem) clamp(1.5rem,5vw,3rem);
+    color: white;
+    margin: auto;
+    font-size:clamp(1.2rem, 5vw,0.5rem) ;
+    gap: 20px;
+}
+
+
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;          /* 0 arriba/abajo, auto a los costados = centrado */
+    padding: 0 20px;
+}
+
+/* El pie de pagina Footer */
+footer {
+    background: #222;
+    color: #DDD;
+    padding: 40px 0 20px;
+}
+
+.footer-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.columna {
+    flex: 1 1 250px;          /* crece, se achica, base 250px */
+}
+
+.columna h4 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.columna ul {
+    list-style: none;
+}
+
+.columna a {
+    color: #DDD;
+    text-decoration: none;
+}
+
+.columna a:hover {
+    color: #FFD34D;
+}
+
+ /* Los iconos de redes, en fila y separados */
+.redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.copyright {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.redes a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
