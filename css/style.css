@@ -384,3 +384,19 @@ footer {
     align-items: center;
     font-size: 18px;
 }
+
+.carrito-header {
+    position: relative;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #cf4e1f;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}

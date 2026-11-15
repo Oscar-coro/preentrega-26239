@@ -12,7 +12,7 @@ function mostrarProductos(){
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
         <p class="precio">${precio} / ${producto.unidad}</p>
-        <button class="service-link" data-id="${producto.id}">Agregar al carrito</button>
+        <button class="service-link" data-id="${producto.id}">Contratar</button>
       </div>`;
   });
 }
