@@ -12,7 +12,11 @@ function mostrarProductos(){
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
         <p class="precio">${precio} / ${producto.unidad}</p>
+<<<<<<< HEAD
         <button onclick="agregarProducto(${producto.id})" class="boton">Contratar<i class="fa-solid fa-handshake"></i></button>
+=======
+        <button class="service-link" data-id="${producto.id}">Contratar</button>
+>>>>>>> 86eaacb0e404c1582b1f85695cf541270cb24c0c
       </div>`;
   });
 }

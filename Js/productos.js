@@ -16,7 +16,11 @@ const productos = [
     precio: 35000,
     unidad: "hora",
     icono: "fas fa-chart-line"
+<<<<<<< HEAD
   },
+=======
+   },
+>>>>>>> 86eaacb0e404c1582b1f85695cf541270cb24c0c
   {
     id: 3,
     nombre: "Recursos Humanos",
@@ -39,7 +43,11 @@ const productos = [
     id: 5,
     nombre: "Desarrollo de Software",
     categoria: "Desarrollo",
+<<<<<<< HEAD
     descripcion: "Aplicaciones y herramientas personalizadas",
+=======
+    descripcion: "Aplicaciones y herramientes personalizadas",
+>>>>>>> 86eaacb0e404c1582b1f85695cf541270cb24c0c
     precio: 35000,
     unidad: "hora",
     icono: "fas fa-code"
