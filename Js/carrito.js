@@ -71,6 +71,29 @@ function eliminarProducto(id) {
   guardarCarrito(carritoNuevo);
 }
 
+// Suma o resta UNA unidad (hora) a un producto del carrito.
+// cambio vale +1 para sumar o -1 para restar.
+// Si la cantidad llega a 0, el producto se borra del carrito.
+function cambiarUnidad(id, cambio) {
+  const carrito = obtenerCarrito();
+
+  const itemEnCarrito = carrito.find(function (item) {
+    return item.id === id;
+  });
+
+  if (!itemEnCarrito) {
+    return;
+  }
+
+  itemEnCarrito.unidad = itemEnCarrito.unidad + cambio;
+
+  if (itemEnCarrito.unidad <= 0) {
+    eliminarProducto(id);
+  } else {
+    guardarCarrito(carrito);
+  }
+}
+
 // Vacia el carrito por completo.
 function vaciarCarrito() {
   guardarCarrito([]);

@@ -23,7 +23,15 @@ function mostrarCarrito() {
     lista.innerHTML += `
       <div class="item-carrito">
         <span class="item-nombre">${item.nombre}</span>
-        <span>x ${item.unidad}</span>
+        <div class="item-cantidad">
+          <button class="boton-cantidad" onclick="cambiarYMostrar(${item.id}, -1)" title="Restar una hora">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <span>${item.unidad} ${item.unidad === 1 ? "hora" : "horas"}</span>
+          <button class="boton-cantidad" onclick="cambiarYMostrar(${item.id}, 1)" title="Sumar una hora">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
         <span class="item-precio">${formatearPrecio(item.precio * item.unidad)}</span>
         <button onclick="quitarYMostrar(${item.id})" title="Quitar">
           <i class="fa-solid fa-trash"></i>
@@ -33,6 +41,12 @@ function mostrarCarrito() {
   }
 
   total.textContent = formatearPrecio(calcularTotal());
+}
+
+// Suma o resta una hora y vuelve a dibujar la lista
+function cambiarYMostrar(id, cambio) {
+  cambiarUnidad(id, cambio);
+  mostrarCarrito();
 }
 
 // Quita el producto y vuelve a dibujar la lista
