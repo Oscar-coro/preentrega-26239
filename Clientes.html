@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalizar compra - Soluciones Empresariales</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header>
+        <div class="conten-logo">
+            <a href="index.html" class="logo">
+                <div class="icono">
+                    <i class="fa-brands fa-codepen"></i>
+                </div>
+                <span>Soluciones Empresariales</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Inicio</a>
+
+                <a href="Clientes.html" class="carrito-header" title="Ver carrito"><i class="fa-solid fa-file-pen"></i>
+                <span id="contador-carrito" class="contador">0</span>  
+                </a>
+                
+            
+            </nav>
+        </div>
+    </header>
+<!-- ==================== MAIN ==================== -->
+<main class="contenedor">
+  <h2 class="titulo-seccion">Finalizar compra</h2>
+
+  <div class="bloque-checkout">
+
+    <!-- Columna 1: lo que hay en el carrito (lo llena js/finalizar.js) -->
+    <section class="resumen-carrito">
+      <h3>Tu carrito</h3>
+      <div id="lista-carrito"></div>
+
+      <p class="total">Total: <span id="total-carrito">$0</span></p>
+      <button class="boton-secundario" onclick="vaciarCarrito(); mostrarCarrito();">
+        <i class="fa-solid fa-trash"></i> Vaciar carrito
+      </button>
+    </section>
+
+    <!-- Columna 2: datos del comprador -->
+    <section class="formulario-compra">
+      <h3>Tus datos</h3>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Ej: Ana Pérez">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="ana@mail.com">
+
+      <button class="boton" onclick="finalizarCompra()">
+        <i class="fa-solid fa-check"></i> Confirmar compra
+      </button>
+    </section>
+
+  </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <p class="copyright">&copy; 2026 Soluciones Empresariales </p>
+</footer>
+
+<!-- SweetAlert2: libreria para mostrar alertas lindas -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
+
+<!-- El orden importa: primero los datos, despues las funciones -->
+<script src="Js/productos.js"></script>
+<script src="Js/carrito.js"></script>
+<script src="Js/finalizar.js"></script>
+
+</body>
+</html>
